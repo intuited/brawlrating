@@ -101,7 +101,7 @@ Then just export a deck and run the utility.
 
 Ratings are based on [those collected by redditor schlarpc][1].
 
-Commander ratings use the data from [this spreadsheet][2].
+Commander ratings are from [a second spreadsheet][2], mentioned in a comment by schlarpc on the reddit post.
 
 1: https://www.reddit.com/r/MagicArena/comments/1d0pih7/spreadsheet_of_card_weights_for_brawl/
-2: https://docs.google.com/spreadsheets/d/1UKhHjCJ0bU0r2HLQV85usa3WnmdjNHW_9UTDXdPAutA/edit#gid=1412951292
+2: https://docs.google.com/spreadsheets/d/1NUxfvRGw_dofRmduo9lrvH5oUhqj4I6G1QsqhZvRL20/edit#gid=0

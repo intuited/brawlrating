@@ -55,7 +55,7 @@ def parse_line(line):
     >>> parse_line('8 Swamp (M21) 311')
     Deckline(count=8, card=Card(id=None, name='Swamp', set='M21', weight=None))
     """
-    DEBUG(f"parse_line {line=}")
+    # DEBUG(f"parse_line {line=}")
     match = deck_re.match(line)
     if not match:
         raise Exception(f"parse_line: deck_re failed to match line \"{line}\".")

@@ -57,19 +57,6 @@ def parse_line(line):
                          set=match.groupdict()['set'],
                          weight=None) )
 
-# def db_lookup(name):
-#     """ Look up a card in the DB by name.  Returns all matching cards in a list.
-#     >>> db_lookup('Aven Mindcensor')
-#     [Card(id=73777, name='Aven Mindcensor', set='AKR', weight=9)]
-#     >>> db_lookup('Witch-king of Angmar')
-#     [Card(id=84806, name='Witch-king of Angmar', set='LTR', weight=27)]
-#     >>> db_lookup('Liliana, Dreadhorde General')
-#     [Card(id=69548, name='Liliana, Dreadhorde General', set='WAR', weight=27)]
-#     >>> len(db_lookup('Swamp'))
-#     153
-#     """
-#     return [card for card in db if card.name == name]
-
 def parse_decklist(decklist):
     mainboard = decklist.split('\n')[4:] # lines 1-4 are "Commander", the commander, an empty line, and "Deck"
     return [parse_line(line) for line in mainboard]

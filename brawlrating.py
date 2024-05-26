@@ -1,6 +1,7 @@
 from re import compile as re_compile
 from collections import namedtuple, defaultdict
 import test_data
+from os import path
 import pyperclip
 Card = namedtuple('Card', ('id', 'name', 'set', 'weight'))
 Deckline = namedtuple('Deckline', ('count', 'card'))
@@ -17,8 +18,9 @@ def read_weights(filename):
     with open(filename) as f:
         firstline = f.readline()
         return [Card(*typify( *line.rstrip().split("\t") )) for line in f]
-cmdr_db = read_weights('commanderweights.tsv')
-card_db = read_weights('weights.tsv')
+install_dir = path.dirname(__file__)
+cmdr_db = read_weights(path.join(install_dir, 'commanderweights.tsv'))
+card_db = read_weights(path.join(install_dir, 'weights.tsv'))
 
 def compile_weights(db):
     """Builds a dictionary of card names to card weights from the DB.

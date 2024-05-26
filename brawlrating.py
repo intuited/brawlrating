@@ -65,14 +65,14 @@ def print_card_weights(decklist):
     print('Count | Weight | Card')
     print('------+--------+-----')
     total_weight = 0
-    for line in decklist:
-        #DEBUG(f"print_card_weights: {line=}")
-        #DEBUG(f"print_card_weights:     {line.card=}")
-        #DEBUG(f"{card_weights=}")
-        weight = card_weights[line.card.name]
-        print(f"{line.count:6}|{weight:7}|{line.card.name}")
-        total_weight += line.count * weight
-    print('')
+    WeightedCard = namedtuple('WeightedCard', ('count', 'weight', 'name'))
+    weighted = (WeightedCard(line.count, card_weights[line.card.name], line.card.name)
+                for line in decklist)
+    sorted_ = sorted(weighted, key=lambda i: i[1])
+    for card in sorted_:
+        print(f"{card.count:6}|{card.weight:7}|{card.name}")
+        total_weight += card.count * card.weight
+    print()
     print(f'Total card weight: {total_weight}')
 
 if __name__ == "__main__": 

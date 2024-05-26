@@ -41,6 +41,22 @@ def compile_weights(db):
     return ret
 card_weights = compile_weights(card_db)
 cmdr_weights = compile_weights(cmdr_db)
+def get_weight(name, cmdr=False):
+    """Need to do extra processing for some split cards.
+
+    Arena exports some split cards with two slashes, e.g. "Discovery // Dispersal",
+    and others with three, e.g. 'Consign /// Oblivion'.
+
+    The database uses two slashes for all of these cards.
+
+    >>> get_weight('Discovery // Dispersal')
+    27.0
+    >>> get_weight('Consign /// Oblivion')
+    27.0
+    """
+    db = cmdr_weights if cmdr else card_weights
+    name = name.replace('///', '//')
+    return db[name]
 
 deck_re = re_compile(r'(?P<count>\d+) (?P<name>.*) \((?P<set>[A-Z0-9]{3})\) (?P<id>\d+)')
 def parse_line(line):
@@ -56,6 +72,8 @@ def parse_line(line):
     Deckline(count=1, card=Card(id=None, name='Liliana, Dreadhorde General', set='WAR', weight=None))
     >>> parse_line('8 Swamp (M21) 311')
     Deckline(count=8, card=Card(id=None, name='Swamp', set='M21', weight=None))
+    >>> parse_line('1 Consign /// Oblivion (AKR) 230')
+    Deckline(count=1, card=Card(id=None, name='Consign /// Oblivion', set='AKR', weight=None))
     """
     # DEBUG(f"parse_line {line=}")
     match = deck_re.match(line)
@@ -77,7 +95,7 @@ def parse_commander(decklist):
 def print_card_weights(decklist):
     commander = parse_commander(decklist)
     mainboard = parse_mainboard(decklist)
-    commander_weight = cmdr_weights[commander.name]
+    commander_weight = get_weight(commander.name, True)
 
     print(f"Commander: {commander.name}")
     print(f"Commander weight: {commander_weight}")
@@ -87,7 +105,7 @@ def print_card_weights(decklist):
     print('------+--------+-----')
     mainboard_weight = 0
     WeightedCard = namedtuple('WeightedCard', ('count', 'weight', 'name'))
-    weighted = (WeightedCard(line.count, card_weights[line.card.name], line.card.name)
+    weighted = (WeightedCard(line.count, get_weight(line.card.name), line.card.name)
                 for line in mainboard)
     sorted_ = sorted(weighted, key=lambda i: i[1])
     for card in sorted_:

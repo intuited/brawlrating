@@ -1,6 +1,7 @@
 from re import compile as re_compile
 from collections import namedtuple, defaultdict
 import test_data
+import pyperclip
 Card = namedtuple('Card', ('id', 'name', 'set', 'weight'))
 Deckline = namedtuple('Deckline', ('count', 'card'))
 
@@ -95,4 +96,4 @@ def print_card_weights(decklist):
     print(f'Total deck weight including commander: {mainboard_weight + commander_weight}')
 
 if __name__ == "__main__": 
-    print_card_weights(test_data.onyx)
+    print_card_weights(pyperclip.paste().strip())

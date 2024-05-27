@@ -777,11 +777,11 @@ id	name	expansion	weight
 76853	Plains	ANA	0
 76854	Swamp	ANA	0
 76855	Forest	ANA	0
-77054	?	?	0
-77056	?	?	0
-77058	?	?	0
-77062	?	?	0
-77063	?	?	0
+77054	Arid Mesa	MH2	0
+77056	Marsh Flats	MH2	0
+77058	Misty Rainforest	MH2	0
+77062	Scalding Tarn	MH2	0
+77063	Verdant Catacombs	MH2	0
 77460	Plains	AFR	0
 77461	Plains	AFR	0
 77462	Plains	AFR	0
@@ -8981,27 +8981,27 @@ id	name	expansion	weight
 91481	Olivia, Opulent Outlaw	OTC	9
 91482	Stella Lee, Wild Card	OTC	9
 91483	Yuma, Proud Protector	OTC	9
-91492	?	?	9
-91494	?	?	9
-91496	?	?	9
-91497	?	?	9
-91498	?	?	9
-91499	?	?	9
-91500	?	?	9
-91501	?	?	9
-91502	?	?	9
-91505	?	?	9
-91507	?	?	9
-91508	?	?	9
-91511	?	?	9
-91514	?	?	9
-91516	?	?	9
-91517	?	?	9
-91518	?	?	9
-91519	?	?	9
-91520	?	?	9
-91521	?	?	9
-91522	?	?	9
+91492	Jessie Zane, Fangbringer	Y24	9
+91494	Grenzo, Crooked Jailer	Y24	9
+91496	Runecarved Obelisk	Y24	9
+91497	Resolute Rejection	Y24	9
+91498	Weave the Nightmare	Y24	9
+91499	Intruder's Inquisition	Y24	9
+91500	Solitary Defiance	Y24	9
+91501	Cathartic Operation	Y24	9
+91502	Teysa of the Ghost Council	Y24	9
+91505	Emperor Apatzec Intli IV	Y24	9
+91507	Saint Elenda	Y24	9
+91508	Vona de Iedo, the Antifex	Y24	9
+91511	Pearl Collector	Y24	9
+91514	Grave Expectations	Y24	9
+91516	Silent Extraction	Y24	9
+91517	Switchgrass Grazer	Y24	9
+91518	Blooming Cactusfolk	Y24	9
+91519	Thieving Aven	Y24	9
+91520	Impetuous Lootmonger	Y24	9
+91521	Triumphant Getaway	Y24	9
+91522	Nashi, Illusion Gadgeteer	Y24	9
 66641	Luminous Bonds	RIX	12
 67730	Luminous Bonds	M19	12
 68482	Luminous Bonds	GRN	12
@@ -10608,15 +10608,15 @@ id	name	expansion	weight
 90761	Contagion Engine	OTP	18
 90765	Dust Bowl	OTP	18
 91399	Cackling Observer	Y24	18
-91493	?	?	18
-91495	?	?	18
-91503	?	?	18
-91506	?	?	18
-91509	?	?	18
-91510	?	?	18
-91512	?	?	18
-91513	?	?	18
-91515	?	?	18
+91493	Wagon Wrecker	Y24	18
+91495	Prairie Survivalist	Y24	18
+91503	Albiorix, Goose Tyrant	Y24	18
+91506	Rankle, Pitiless Trickster	Y24	18
+91509	Ruby Collector	Y24	18
+91510	Emerald Collector	Y24	18
+91512	Sapphire Collector	Y24	18
+91513	Jet Collector	Y24	18
+91515	Stalwart Realmwarden	Y24	18
 77145	Veteran Dungeoneer	AFR	21
 17205	Chainer's Edict	TOR	27
 17618	Mirari's Wake	JUD	27

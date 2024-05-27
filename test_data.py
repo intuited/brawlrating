@@ -172,3 +172,148 @@ Deck
 1 Yahenni's Expertise (KLR) 112
 1 Necropotence (WOT) 31
 1 Bitter Triumph (LCI) 91"""
+
+saint_elenda = """\
+Commander
+1 Saint Elenda (Y24) 4
+
+Deck
+1 Ajani's Welcome (M19) 6
+34 Plains (M21) 309
+1 A-Dawnbringer Cleric (HBG) 87
+1 Charming Prince (ELD) 8
+1 Soul Warden (M10) 34
+1 Lunarch Veteran (MID) 27
+1 Daxos, Blessed by the Sun (MUL) 67
+1 Inspiring Overseer (SNC) 18
+1 By Invitation Only (VOW) 5
+1 Priest of Ancient Lore (HBG) 99
+1 Smothering Tithe (RNA) 22
+1 Sigarda's Splendor (MID) 33
+1 Cathars' Crusade (JMP) 95
+1 Emeria's Call (ZNR) 12
+1 A-The One Ring (LTR) 246
+1 The Celestus (MID) 252
+1 Teleportation Circle (AFR) 39
+1 Path to Exile (OTP) 6
+1 Land Tax (WOT) 9
+1 Archivist of Oghma (HBG) 83
+1 Claim Jumper (OTJ) 8
+1 Idyllic Tutor (THB) 24
+1 Moon-Blessed Cleric (AFR) 26
+1 The Birth of Meletis (THB) 5
+1 Ambitious Farmhand (MID) 2
+1 Thaumatic Compass (XLN) 249
+1 Solemn Simulacrum (M21) 239
+1 Wayfarer's Bauble (CM2) 229
+1 Heliod, Sun-Crowned (THB) 18
+1 Overwhelming Splendor (AKR) 30
+1 Expel the Interlopers (WOE) 13
+1 Farewell (NEO) 13
+1 Arcane Signet (ELD) 331
+1 Aven Interrupter (OTJ) 4
+1 Aven Mindcensor (AKR) 5
+1 Get Lost (LCI) 14
+1 Fateful Absence (MID) 18
+1 Loran of the Third Path (BRO) 12
+1 Heliod's Intervention (THB) 19
+1 Stroke of Midnight (WOE) 33
+1 Bovine Intervention (OTJ) 6
+1 Swords to Plowshares (STA) 10
+1 Lay Down Arms (BRO) 11
+1 Fragment Reality (Y22) 4
+1 Soul Partition (BRO) 26
+1 Resplendent Angel (LCI) 32
+1 Aurelia's Vindicator (MKM) 4
+1 Elspeth Resplendent (SNC) 11
+1 Invasion of Gobakhan (MOM) 22
+1 Castle Ardenvale (ELD) 238
+1 Minas Tirith (LTR) 256
+1 Cave of the Frost Dragon (AFR) 253
+1 Dawn of a New Age (LTR) 5
+1 Revitalize (STA) 9
+1 Union of the Third Path (BRO) 31
+1 Mazemind Tome (M21) 232
+1 Invasion of Dominaria (MOM) 21
+1 Golden Egg (ELD) 220
+1 Lembas (LTR) 243
+1 Mana Tithe (STA) 8
+1 Reprieve (LTR) 26
+1 Elspeth Conquers Death (THB) 13
+1 Roaming Throne (LCI) 258
+1 Field of Ruin (MID) 262
+1 Demolition Field (BRO) 260
+1 Skyclave Apparition (ZNR) 39"""
+
+rankle = """\
+Commander
+1 Rankle, Pitiless Trickster (Y24) 11
+
+Deck
+1 Burglar Rat (GRN) 64
+33 Snow-Covered Swamp (KHM) 281
+1 Elderfang Disciple (KHM) 93
+1 Acquisitions Expert (ZNR) 89
+1 Corrupt Court Official (SNC) 70
+1 Waste Not (WOT) 38
+1 Virus Beetle (NEO) 128
+1 Gix, Yawgmoth Praetor (BRO) 95
+1 Dusk Legion Zealot (RIX) 70
+1 Miasmic Mummy (AKR) 116
+1 Rankle, Master of Pranks (ELD) 101
+1 Insatiable Avarice (OTJ) 91
+1 Troll of Khazad-dûm (LTR) 111
+1 Bloodsoaked Champion (KTK) 66
+1 Dark Ritual (STA) 26
+1 Ego Drain (WOE) 86
+1 Eyetwitch (STX) 70
+1 Gutterbones (RNA) 76
+1 Greedy Freebooter (LCI) 109
+1 Kaya's Ghostform (WAR) 94
+1 Malakir Rebirth (ZNR) 111
+1 Reanimate (OTP) 18
+1 Shambling Ghast (HBG) 167
+1 Thoughtseize (AKR) 127
+1 Bitterblossom (WOT) 27
+1 Call of the Ring (LTR) 79
+1 Go for the Throat (BRO) 102
+1 Infernal Grasp (MID) 107
+1 Jadar, Ghoulcaller of Nephalia (MID) 108
+1 Power Word Kill (AFR) 114
+1 Sign in Blood (STA) 32
+1 Tenacious Underdog (SNC) 97
+1 The Raven Man (DMU) 103
+1 Undead Butler (VOW) 133
+1 Ayara, First of Locthwain (MUL) 78
+1 Painful Bond (Y22) 12
+1 Blood Pact (MID) 88
+1 Midnight Reaper (GRN) 77
+1 Morbid Opportunist (MID) 113
+1 Liliana of the Veil (DMU) 97
+1 Sorin the Mirthless (VOW) 131
+1 Liliana, Dreadhorde General (WAR) 97
+1 Bitter Triumph (LCI) 91
+1 Lolth, Spider Queen (AFR) 112
+1 Cabal Stronghold (DAR) 238
+1 Hypnotic Specter (M10) 100
+1 Mausoleum Secrets (GRN) 75
+1 Castle Locthwain (ELD) 241
+1 Hive of the Eye Tyrant (AFR) 258
+1 Takenuma, Abandoned Mire (NEO) 278
+1 Phyrexian Tower (JMP) 493
+1 Agadeem's Awakening (ZNR) 90
+1 Cavern of Souls (LCI) 269
+1 Extinction Event (IKO) 88
+1 Dreadhorde Invasion (WAR) 86
+1 Murderous Rider (ELD) 97
+1 Mind Spike (HBG) 46
+1 Solemn Simulacrum (M21) 239
+1 Blood on the Snow (KHM) 79
+1 Crux of Fate (STA) 25
+1 Liliana, Death's Majesty (AKR) 111
+1 Deadly Cover-Up (MKM) 83
+1 Nezumi Informant (MOM) 120
+1 Phyrexian Arena (ONE) 104
+1 Black Market Connections (HBG) 145
+1 Nasty End (LTR) 99
+1 Baleful Mastery (STX) 64"""

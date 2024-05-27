@@ -93,6 +93,45 @@ def parse_commander(decklist):
     return parse_line(decklist.split('\n')[1]).card # Commander is on the second line of the decklist
 
 def print_card_weights(decklist):
+    """Prints out a total weight for the deck as well as each contained card.
+
+    >>> print_card_weights(test_data.teysa_oo) # doctest: +ELLIPSIS
+    Commander: Teysa, Opulent Oligarch
+    Commander weight: 9.0
+    <BLANKLINE>
+    Cards in the 99:
+    Count | Weight | Card
+    ------+--------+-----
+         8|    0.0|Swamp
+         8|    0.0|Plains
+         1|    0.0|Plaza of Heroes
+         1|    0.0|Isolated Chapel
+    ...
+         1|   45.0|Shadowspear
+         1|   45.0|Emeria's Call
+         1|   45.0|Agadeem's Awakening
+         1|   45.0|Sheoldred, the Apocalypse
+    <BLANKLINE>
+    Total mainboard weight: 1797.0
+    Total deck weight including commander: 1806.0
+
+    >>> print_card_weights(test_data.onyx) # doctest: +ELLIPSIS
+    Commander: Professor Onyx
+    ...
+    Total deck weight including commander: 2169.0
+
+    >>> print_card_weights(test_data.saint_elenda) # doctest: +ELLIPSIS
+    Commander: Saint Elenda
+    ...
+    Total deck weight including commander: 1449.0
+
+    >>> print_card_weights(test_data.rankle) # doctest: +ELLIPSIS
+    Commander: Rankle, Pitiless Trickster
+    ...
+         1|    9.0|Troll of Khazad-dûm
+    ...
+    Total deck weight including commander: 1656.0
+    """
     commander = parse_commander(decklist)
     mainboard = parse_mainboard(decklist)
     commander_weight = get_weight(commander.name, True)
@@ -116,4 +155,15 @@ def print_card_weights(decklist):
     print(f'Total deck weight including commander: {mainboard_weight + commander_weight}')
 
 if __name__ == "__main__": 
-    print_card_weights(pyperclip.paste().strip())
+    # Clipboard may contain Windows-encoded text under WSL?
+    # I don't pretend to understand what was happening here
+    # but this exception-handling code fixed the issue with pyperclip
+    # that occurred when trying to import a decklist containing
+    # Troll of Khazad=dûm (the Rankle deck that was also pasted into
+    # test_data.py).
+    try:
+        decklist = pyperclip.paste()
+    except UnicodeDecodeError:
+        pyperclip.ENCODING = 'cp437'
+        decklist = pyperclip.paste()
+    print_card_weights(decklist.strip())

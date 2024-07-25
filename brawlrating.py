@@ -3,8 +3,12 @@ from collections import namedtuple, defaultdict
 import test_data
 from os import path
 import pyperclip
+
 Card = namedtuple('Card', ('id', 'name', 'set', 'weight'))
 Deckline = namedtuple('Deckline', ('count', 'card'))
+
+# Weight used for cards not found in the database
+NEW_CARD_WEIGHT = 0
 
 def DEBUG(s):
     print('\n'.join([f"DEBUG: {l}" for l in s.split('\n')]))
@@ -53,10 +57,17 @@ def get_weight(name, cmdr=False):
     27.0
     >>> get_weight('Consign /// Oblivion')
     27.0
+    >>> get_weight('Dismember')
+    0
+    >>> get_weight('Arid Mesa')
+    0.0
     """
     db = cmdr_weights if cmdr else card_weights
     name = name.replace('///', '//')
-    return db[name]
+    try:
+        return db[name]
+    except KeyError:
+        return NEW_CARD_WEIGHT
 
 deck_re = re_compile(r'(?P<count>\d+) (?P<name>.*) \((?P<set>[A-Z0-9]{3})\) (?P<id>\d+)')
 def parse_line(line):

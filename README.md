@@ -99,6 +99,11 @@ Then just export a deck and run the utility.
     Total mainboard weight: 1809.0
     Total deck weight including commander: 2169.0
 
+Cards which not part of the dataset (typically new cards added to Arena after
+the data was mined) are given a integer weight of 0.  This differs from the
+floating point 0.0 used in the dataset.  Thus new cards are readily
+recognizable in the output.
+
 Ratings are based on [those collected by redditor schlarpc][1].
 
 Commander ratings are from [a second spreadsheet][2], mentioned in a comment by schlarpc on the reddit post.
